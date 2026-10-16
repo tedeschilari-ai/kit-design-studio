@@ -27,8 +27,9 @@ body{font-family:var(--font);letter-spacing:-.025em}
 h1,h2,h3,h4{font-family:var(--font)}
 .grad{background:linear-gradient(95deg,#ff5cf0 0%,#b45cff 50%,#2B70F9 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
 .btn{letter-spacing:-.02em}
-.topo{position:relative;z-index:30;background:#111;color:#fff;text-align:center;font-size:13.5px;font-weight:600;padding:10px 16px}
-.topo b{color:var(--k-green)}
+.topo{position:relative;z-index:30;background:linear-gradient(90deg,#e0362b,#ff5a3c,#e0362b);background-size:200% 100%;animation:brilho 6s linear infinite;color:#fff;text-align:center;font-size:13.5px;font-weight:600;padding:10px 16px}
+.topo b{color:#fff;background:rgba(0,0,0,.18);padding:2px 8px;border-radius:999px}
+@keyframes brilho{to{background-position:200% 0}}
 .logo-k{display:block;height:46px;width:auto;margin:0 auto 26px}
 section h2{letter-spacing:-.035em}
 
@@ -205,6 +206,39 @@ section h2{letter-spacing:-.035em}
 .rod{text-align:center;padding:40px 16px 110px;color:var(--dim);font-size:13px;border-top:1px solid var(--line)}
 .rod p+p{margin-top:8px;font-size:12px}
 
+
+/* ===== mais movimento ===== */
+.vs-stage{position:relative;max-width:980px;margin:46px auto 0}
+.vs-stage .vs{margin-top:0}
+.selo-k{position:absolute;z-index:6;left:-34px;top:-40px;width:126px;height:126px}
+.selo-k svg{position:absolute;inset:0;animation:spin 16s linear infinite}
+.selo-k .mid{position:absolute;inset:34px;border-radius:50%;background:#fff;display:grid;place-items:center;box-shadow:0 10px 24px -10px rgba(0,0,0,.35)}
+.selo-k .mid b{font-size:22px;font-weight:800;letter-spacing:-.05em;color:#111;line-height:1}
+.selo-k .mid small{display:block;font-size:8.5px;font-weight:700;letter-spacing:.08em;color:#777;text-align:center}
+.vs-stage .tool{z-index:6}
+.vs-stage .ft1{right:-22px;top:18%;background:var(--k-blue)}
+.vs-stage .ft2{right:46%;bottom:-24px;background:var(--k-orange);animation-delay:-2s}
+.vs-stage .ft3{left:-24px;bottom:22%;background:var(--k-green);animation-delay:-4s}
+.vs-stage .tool svg{stroke:#fff}
+.faixa-wrap{overflow:hidden;padding:20px 0}
+.faixa-k{position:relative;z-index:3;background:#111;color:#fff;overflow:hidden;padding:16px 0;rotate:-1.2deg;margin:50px -20px 0;box-shadow:0 20px 40px -20px rgba(0,0,0,.4)}
+.faixa-k .tr{display:flex;gap:40px;width:max-content;animation:slide 26s linear infinite;font-weight:700;font-size:17px;letter-spacing:-.02em;white-space:nowrap}
+.faixa-k .tr span{display:flex;align-items:center;gap:12px}
+.faixa-k .tr span::before{content:"";width:14px;height:11px;border-radius:2px 4px 4px 4px;background:var(--c)}
+.galeria{padding:10px 0 90px}
+.galeria .car figure{width:360px;padding:0;border:0;background:none}
+.galeria .car img{aspect-ratio:1164/533;border-radius:16px;box-shadow:var(--card-shadow)}
+.galeria .car+.car{margin-top:14px}
+.galeria .car.rev .ct{animation-direction:reverse}
+.galeria .car figcaption{display:none}
+.num-anim{font-variant-numeric:tabular-nums}
+.oferta .mk.tiltp{transition:transform .2s ease-out}
+.eg .vis::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.35) 45%,transparent 60%);transform:translateX(-120%);animation:passa 5.5s ease-in-out infinite;pointer-events:none}
+.eg:nth-child(2) .vis::after{animation-delay:1.3s}.eg:nth-child(3) .vis::after{animation-delay:2.6s}.eg:nth-child(4) .vis::after{animation-delay:3.9s}
+@keyframes passa{0%,55%{transform:translateX(-120%)}80%,100%{transform:translateX(120%)}}
+.btn.pulsa{animation:pulsa 2.6s ease-in-out infinite}
+@keyframes pulsa{0%,100%{box-shadow:0 14px 34px -12px rgba(61,220,122,.7),0 0 0 0 rgba(61,220,122,.45)}50%{box-shadow:0 14px 34px -12px rgba(61,220,122,.7),0 0 0 12px rgba(61,220,122,0)}}
+@media (max-width:640px){.selo-k{width:92px;height:92px;left:-6px;top:-34px}.selo-k .mid{inset:24px}.selo-k .mid b{font-size:16px}.selo-k .mid small{font-size:6.5px}.vs-stage .tool{display:none}.galeria .car figure{width:260px}.faixa-k .tr{font-size:15px}}
 @media (max-width:860px){
   .vs{grid-template-columns:1fr}
   .pp,.eg{grid-template-columns:1fr;gap:20px}
@@ -235,9 +269,14 @@ section h2{letter-spacing:-.035em}
   <div class="bgfx"><div class="glow"></div></div>
   <div class="wrap">
     <img class="logo-k" src="assets/logo-kit-escuro.webp" alt="Kit Design Studio · Lari Tedeschi" width="798" height="393">
-    <span class="pillbar"><img src="assets/alunos.webp" alt=""><span><b>+300 designers</b> já estruturaram o studio com o Kit</span></span>
+    <span class="pillbar"><img src="assets/alunos.webp" alt=""><span><b>+<span class="num-anim" data-count="300">300</span> designers</b> já estruturaram o studio com o Kit</span></span>
     <h1 id="h1">Tenha acesso imediato aos <span class="grad">contratos, propostas e documentos essenciais</span> para atender seus clientes de design com mais segurança e profissionalismo.</h1>
 
+    <div class="vs-stage">
+    <div class="selo-k" aria-hidden="true"><svg viewBox="0 0 200 200"><defs><path id="cr" d="M100,100 m-74,0 a74,74 0 1,1 148,0 a74,74 0 1,1 -148,0"/></defs><circle cx="100" cy="100" r="98" fill="#111"/><text fill="#fff" font-family="Inter,Arial" font-size="15.5" font-weight="700" letter-spacing="2" textLength="455" lengthAdjust="spacing"><textPath href="#cr">KIT DESIGN STUDIO ✦ +300 DESIGNERS ✦</textPath></text></svg><div class="mid"><div><b>R$47</b><small>VITALÍCIO</small></div></div></div>
+    <div class="tool ft1 hot" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h4"/></svg></div>
+    <div class="tool ft2 hot" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.5 8.5 0 1 1 21 11.5z"/></svg></div>
+    <div class="tool ft3 hot" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
     <div class="vs">
       <div class="vsc sem rv" role="img" aria-label="Sem o Kit: arquivos soltos e mensagens de cliente cobrando">
         <span class="tg">✕ Você sem o Kit</span>
@@ -265,13 +304,16 @@ section h2{letter-spacing:-.035em}
         <div class="prop"><div class="cap">SUA MARCA</div><div class="tx"><b>Proposta comercial</b><i></i><i></i></div><span class="ok">✓ Enviada</span></div>
       </div>
     </div>
+    </div>
 
     <div class="ctas rv">
-      <a class="btn" href="#oferta">Quero estruturar meu studio <span class="arr">→</span></a>
+      <a class="btn pulsa" href="#oferta">Quero estruturar meu studio <span class="arr">→</span></a>
     </div>
     <p class="micro rv">🔒 Pagamento seguro · Acesso vitalício · 7 dias de garantia</p>
   </div>
 </header>
+
+<div class="faixa-wrap"><div class="faixa-k" aria-hidden="true"><div class="tr"><span style="--c:#2B70F9">Contratos</span><span style="--c:#FF70FE">Proposta comercial</span><span style="--c:#3DDC7A">Roteiro de briefing</span><span style="--c:#FEA711">Manual de marca</span><span style="--c:#2B70F9">Apresentação</span><span style="--c:#FF70FE">Scripts de WhatsApp</span><span style="--c:#3DDC7A">Dashboard no Notion</span><span style="--c:#FEA711">3 bônus</span><span style="--c:#2B70F9">Contratos</span><span style="--c:#FF70FE">Proposta comercial</span><span style="--c:#3DDC7A">Roteiro de briefing</span><span style="--c:#FEA711">Manual de marca</span><span style="--c:#2B70F9">Apresentação</span><span style="--c:#FF70FE">Scripts de WhatsApp</span><span style="--c:#3DDC7A">Dashboard no Notion</span><span style="--c:#FEA711">3 bônus</span></div></div></div>
 
 <!-- Depoimentos: entram quando chegarem os prints de WhatsApp das alunas -->
 
@@ -356,6 +398,12 @@ section h2{letter-spacing:-.035em}
   </div>
 </section>
 
+<!-- Galeria do Kit -->
+<section class="galeria" aria-hidden="true">
+  <div class="car"><div class="ct"><figure><img src="assets/contratos-profissionais.webp" alt="" loading="lazy"></figure><figure><img src="assets/proposta-comercial.webp" alt="" loading="lazy"></figure><figure><img src="assets/manual-de-marca.webp" alt="" loading="lazy"></figure><figure><img src="assets/apresentacao-de-marca.webp" alt="" loading="lazy"></figure></div></div>
+  <div class="car rev"><div class="ct"><figure><img src="assets/processo-comercial-completo.webp" alt="" loading="lazy"></figure><figure><img src="assets/scripts.webp" alt="" loading="lazy"></figure><figure><img src="assets/roteiro-de-briefing.webp" alt="" loading="lazy"></figure><figure><img src="assets/dashboard-notion.webp" alt="" loading="lazy"></figure></div></div>
+</section>
+
 <!-- Pra você que -->
 <section class="pq">
   <div class="wrap">
@@ -392,13 +440,13 @@ section h2{letter-spacing:-.035em}
     <div class="deveria rv"><b>Tudo isso deveria custar: <s>+R$487,00</s></b><p>Mas hoje você pode ter acesso ao Kit Design Studio por um valor muito mais acessível!</p></div>
 
     <div class="oferta rv">
-      <div class="mk"><img src="assets/mockup-kit.webp" alt="Kit Design Studio completo" loading="lazy" width="1164" height="737"></div>
+      <div class="mk tiltp"><img src="assets/mockup-kit.webp" alt="Kit Design Studio completo" loading="lazy" width="1164" height="737"></div>
       <div class="pr">
         <span class="nm">Kit Design Studio + 3 bônus</span>
         <p class="por">De <s>R$487</s> por apenas:</p>
-        <p class="val"><small>R$</small>47</p>
+        <p class="val"><small>R$</small><span class="num-anim" data-count="47" data-from="487">47</span></p>
         <p class="parc">à vista, ou em até 12x de R$4,70 no cartão</p>
-        <a class="btn" href="https://pay.kiwify.com.br/qAoZ63k">Quero estruturar meu studio <span class="arr">→</span></a>
+        <a class="btn pulsa" href="https://pay.kiwify.com.br/qAoZ63k">Quero estruturar meu studio <span class="arr">→</span></a>
         <div class="seg"><span>🔒 Pagamento seguro</span><span>Pix ou cartão</span><span>Acesso imediato por e-mail</span></div>
         <div class="gar"><svg viewBox="0 0 24 24"><path d="M12 2l8 3.5v6c0 5-3.4 8.6-8 10.5-4.6-1.9-8-5.5-8-10.5v-6z" fill="#3DDC7A"/><path d="M8.5 12l2.4 2.4L15.5 10" fill="none" stroke="#111" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>7 dias de garantia.</b> Não fez sentido? Devolvemos 100% do valor.</span></div>
       </div>
@@ -450,7 +498,7 @@ section h2{letter-spacing:-.035em}
         <p class="por">Por apenas:</p>
         <p class="val"><small>R$</small>47</p>
         <p class="parc">à vista, ou em até 12x de R$4,70 no cartão</p>
-        <a class="btn" href="https://pay.kiwify.com.br/qAoZ63k">Quero estruturar meu studio <span class="arr">→</span></a>
+        <a class="btn pulsa" href="https://pay.kiwify.com.br/qAoZ63k">Quero estruturar meu studio <span class="arr">→</span></a>
         <div class="seg"><span>🔒 Pagamento seguro</span><span>Acesso vitalício</span><span>7 dias de garantia</span></div>
       </div>
     </div>
@@ -482,6 +530,13 @@ section h2{letter-spacing:-.035em}
   <svg width="28" height="28" viewBox="0 0 20 20" fill="#fff"><path d="M17.085 2.91A9.9 9.9 0 0 0 10.04 0C4.553 0 .08 4.45.08 9.91c0 1.75.463 3.45 1.327 4.95L0 20l5.276-1.38a9.97 9.97 0 0 0 4.764 1.21C15.528 19.83 20 15.38 20 9.92c0-2.65-1.035-5.14-2.915-7.01zM10.04 18.15a8.3 8.3 0 0 1-4.221-1.15l-.301-.18-3.136.82.834-3.04-.201-.31a8.2 8.2 0 0 1-1.266-4.38c0-4.54 3.718-8.24 8.281-8.24 2.211 0 4.292.86 5.849 2.42a8.15 8.15 0 0 1 2.423 5.83c.02 4.54-3.699 8.23-8.262 8.23zm4.543-6.16c-.251-.12-1.477-.72-1.699-.81-.231-.08-.392-.12-.562.12-.171.25-.644.81-.784.97-.141.17-.292.19-.543.06-.251-.12-1.055-.39-2-1.230-.744-.66-1.236-1.47-1.387-1.72-.141-.25-.02-.38.111-.51.11-.11.251-.29.371-.43.121-.14.171-.25.252-.41.08-.17.04-.31-.02-.43-.061-.12-.563-1.34-.764-1.840-.201-.48-.412-.42-.563-.43h-.482c-.171 0-.433.06-.664.31-.221.25-.864.85-.864 2.07s.894 2.4 1.015 2.56c.121.17 1.759 2.67 4.251 3.74.593.26 1.056.41 1.417.52.593.19 1.136.16 1.568.1.483-.07 1.478-.6 1.679-1.180.211-.58.211-1.070.14-1.180-.07-.11-.221-.16-.472-.28z"/></svg>
 </a>
 
+<script>
+/* números contando quando aparecem na tela */
+(function(){var els=document.querySelectorAll('[data-count]');if(!('IntersectionObserver' in window))return;
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;io.unobserve(e.target);var el=e.target,to=+el.dataset.count,fr=+(el.dataset.from||0),t0=null,d=1400;
+function f(t){if(!t0)t0=t;var p=Math.min(1,(t-t0)/d),k=1-Math.pow(1-p,3);el.textContent=Math.round(fr+(to-fr)*k);if(p<1)requestAnimationFrame(f)}requestAnimationFrame(f)})},{threshold:.6});
+els.forEach(function(el){io.observe(el)})})();
+</script>
 <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
 <script src="assets/escola.js"></script>
 </body>
