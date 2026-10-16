@@ -1,0 +1,488 @@
+<!doctype html>
+<html lang="pt-BR" class="tema-claro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kit Design Studio · Contratos, propostas e documentos prontos para designers</title>
+<meta name="description" content="Contratos, proposta, briefing, apresentação, manual de marca, scripts e dashboard no Notion, prontos e editáveis para você atender como um estúdio de design.">
+<meta name="theme-color" content="#f3f1f3">
+<!-- Kit Design Studio · página /4 (versão 3 da copy, wireframe aprovado em out/2026) -->
+
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','874750447646279');fbq('track','PageView');fbq('track','ViewContent',{content_name:'Kit Design Studio'});
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=874750447646279&ev=PageView&noscript=1" alt=""></noscript>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="assets/escola.css">
+<style>
+/* Kit Design Studio: neutro, com as quatro cores das pastas do logo */
+:root{--accent:#FF70FE;--accent-2:#d743d6;--accent-3:#6b1a6a;--accent-lt:#ff9dfe;
+  --k-pink:#FF70FE;--k-blue:#2B70F9;--k-green:#3DDC7A;--k-orange:#FEA711;--k-ink:#111;
+  --font:"Inter","Helvetica Neue",Arial,sans-serif}
+body{font-family:var(--font);letter-spacing:-.025em}
+h1,h2,h3,h4{font-family:var(--font)}
+.grad{background:linear-gradient(95deg,#ff5cf0 0%,#b45cff 50%,#2B70F9 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.btn{letter-spacing:-.02em}
+.topo{position:relative;z-index:30;background:#111;color:#fff;text-align:center;font-size:13.5px;font-weight:600;padding:10px 16px}
+.topo b{color:var(--k-green)}
+.logo-k{display:block;height:46px;width:auto;margin:0 auto 26px}
+section h2{letter-spacing:-.035em}
+
+/* ===== ABERTURA: sem o Kit × com o Kit ===== */
+.hero.k{padding-top:56px;margin-top:0}
+.hero.k h1{font-size:clamp(34px,5.4vw,64px);max-width:980px;line-height:1.04}
+.vs{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:980px;margin:46px auto 0}
+.vsc{position:relative;border-radius:26px;overflow:hidden;background:var(--card);border:1px solid var(--line);box-shadow:var(--card-shadow);aspect-ratio:5/4;text-align:left}
+.vsc .tg{position:absolute;z-index:5;top:16px;left:50%;transform:translateX(-50%);font-size:13px;font-weight:700;color:#fff;padding:6px 14px;border-radius:999px;white-space:nowrap}
+.vsc.sem .tg{background:#e0533f}.vsc.com .tg{background:#1fa95a}
+/* sem o Kit: mesa bagunçada */
+.vsc.sem{background:repeating-linear-gradient(135deg,#f6f1f1 0 14px,#f2ecec 14px 28px)}
+.arq{position:absolute;display:flex;align-items:center;gap:8px;background:#fff;border:1px solid #eadede;border-radius:10px;padding:8px 11px;font-size:12px;font-weight:600;color:#5b4a4a;box-shadow:0 10px 20px -12px rgba(80,20,20,.35);animation:treme 3.4s ease-in-out infinite}
+.arq i{width:22px;height:26px;border-radius:4px;flex:none;background:#c9c0c0;position:relative}
+.arq i::after{content:"";position:absolute;right:0;top:0;border:5px solid transparent;border-right-color:#fff;border-top-color:#fff}
+.arq.w i{background:#2B70F9}.arq.p i{background:#e0533f}.arq.x i{background:#1fa95a}
+.a1{left:8%;top:22%;rotate:-9deg}.a2{right:9%;top:30%;rotate:7deg;animation-delay:-.8s}.a3{left:14%;top:52%;rotate:5deg;animation-delay:-1.6s}.a4{right:12%;top:62%;rotate:-6deg;animation-delay:-2.4s}.a5{left:30%;top:76%;rotate:3deg;animation-delay:-1.2s}
+@keyframes treme{0%,100%{translate:0 0}25%{translate:2px -3px}50%{translate:-2px 2px}75%{translate:3px 1px}}
+.zap{position:absolute;z-index:4;max-width:62%;background:#fff;border-radius:14px 14px 14px 4px;padding:9px 12px;font-size:12.5px;color:#222;box-shadow:0 14px 26px -14px rgba(0,0,0,.4);opacity:0;animation:pinga 8s ease-in-out infinite}
+.zap small{display:block;font-size:10.5px;color:#999;margin-top:2px;text-align:right}
+.z1{left:8%;top:36%}.z2{right:7%;top:46%;animation-delay:2.6s}.z3{left:18%;top:64%;animation-delay:5.2s}
+@keyframes pinga{0%,4%{opacity:0;transform:translateY(8px) scale(.96)}8%,30%{opacity:1;transform:none}36%,100%{opacity:0;transform:translateY(-6px)}}
+/* com o Kit: pastas organizadas + proposta saindo */
+.vsc.com{background:linear-gradient(160deg,#f3fbf6,#fff 60%)}
+.pastas{position:absolute;left:7%;right:7%;top:20%;display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.pasta{position:relative;aspect-ratio:1/.8;border-radius:6px 12px 12px 12px;background:var(--c);box-shadow:0 12px 22px -14px rgba(0,0,0,.45);animation:sobe .6s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(var(--i)*.12s)}
+.pasta::before{content:"";position:absolute;left:0;top:-9%;width:44%;height:16%;border-radius:6px 6px 0 0;background:var(--c);filter:brightness(.92)}
+.pasta span{position:absolute;left:8%;bottom:9%;font-size:10.5px;font-weight:700;color:#fff;letter-spacing:-.01em}
+.pasta.esc span{color:#111}
+@keyframes sobe{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.prop{position:absolute;left:12%;right:12%;bottom:9%;background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px 14px;box-shadow:0 22px 40px -22px rgba(20,80,40,.45);display:flex;gap:12px;align-items:center}
+.prop .cap{width:64px;height:46px;border-radius:8px;flex:none;background:var(--pc,#2B70F9);animation:cor 6s steps(1) infinite;display:grid;place-items:center;color:#fff;font-size:9px;font-weight:700}
+@keyframes cor{0%{--pc:#2B70F9;background:#2B70F9}33%{background:#FF70FE}66%{background:#111}}
+.prop .tx{flex:1;min-width:0}
+.prop .tx b{display:block;font-size:12.5px}
+.prop .tx i{display:block;height:6px;border-radius:9px;background:#ececec;margin-top:6px}
+.prop .tx i+i{width:70%}
+.prop .ok{flex:none;font-size:11.5px;font-weight:700;color:#1fa95a;background:#e5f8ec;border-radius:999px;padding:5px 10px;animation:okpulse 3s ease-in-out infinite}
+@keyframes okpulse{0%,60%,100%{transform:scale(1)}70%{transform:scale(1.08)}}
+.hero.k .ctas{margin-top:36px}
+.hero.k .micro{margin-top:14px;font-size:14px;color:var(--muted)}
+
+/* ===== DORES: balões ===== */
+.dores{text-align:center}
+.dores .pensa{font-weight:700;margin-top:14px;font-size:17px}
+.baloes{max-width:640px;margin:26px auto 0;display:grid;gap:14px}
+.bal{max-width:84%;justify-self:start;text-align:left;background:#e0533f;color:#fff;font-weight:600;font-size:16px;line-height:1.35;padding:14px 18px;border-radius:20px 20px 20px 6px;box-shadow:0 18px 30px -18px rgba(224,83,63,.7)}
+.bal:nth-child(even){justify-self:end;border-radius:20px 20px 6px 20px}
+.js .bal.rv{transform:translateY(16px) scale(.96)}
+.eusei{margin-top:34px;font-size:clamp(19px,2.4vw,24px);font-weight:700;line-height:1.35}
+.eusei em{font-style:normal;color:#e0533f}
+.dores .e-se{color:var(--muted);margin-top:14px;font-size:17px}
+
+/* ===== 3 PASSOS ===== */
+.passos{background:#111;color:#fff;border-radius:36px;margin:0 16px;padding:90px 0}
+.passos h2{color:#fff}
+.plist{display:grid;gap:18px;margin-top:40px}
+.pp{display:grid;grid-template-columns:1.1fr 1fr;gap:30px;align-items:center;background:#1c1c1c;border:1px solid #2a2a2a;border-radius:24px;padding:30px}
+.pp .n{font-size:13px;font-weight:700;color:var(--c);letter-spacing:.06em;text-transform:uppercase}
+.pp h3{font-size:24px;margin-top:8px;color:#fff;letter-spacing:-.03em}
+.pp p{color:#b9b9b9;margin-top:10px;font-size:16px}
+.cena{position:relative;aspect-ratio:16/10;border-radius:18px;background:#f4f2f5;overflow:hidden}
+/* passo 1: arquivos entrando na pasta */
+.c1 .pz{position:absolute;left:50%;bottom:12%;width:44%;aspect-ratio:1/.72;transform:translateX(-50%);border-radius:8px 14px 14px 14px;background:var(--k-blue)}
+.c1 .pz::before{content:"";position:absolute;left:0;top:-10%;width:42%;height:16%;border-radius:8px 8px 0 0;background:#2463de}
+.c1 .pz b{position:absolute;left:10%;bottom:10%;color:#fff;font-size:12px}
+.c1 .doc{position:absolute;width:20%;aspect-ratio:3/4;border-radius:5px;background:#fff;box-shadow:0 8px 16px -8px rgba(0,0,0,.3);left:var(--x);top:6%;animation:entra 4.8s ease-in-out infinite;animation-delay:var(--d)}
+.c1 .doc::before,.c1 .doc::after{content:"";position:absolute;left:14%;right:14%;height:6%;border-radius:9px;background:#e4e4e4;top:24%}
+.c1 .doc::after{top:40%;right:34%}
+.c1 .doc span{position:absolute;left:12%;bottom:10%;font-size:8.5px;font-weight:700;color:#444}
+@keyframes entra{0%{opacity:0;transform:translateY(-10px)}12%,40%{opacity:1;transform:none}62%{opacity:1;transform:translateY(95%) scale(.6)}72%,100%{opacity:0;transform:translateY(105%) scale(.4)}}
+/* passo 2: proposta trocando de cor e de logo */
+.c2 .pg{position:absolute;inset:10% 14%;border-radius:10px;background:#fff;box-shadow:0 18px 30px -18px rgba(0,0,0,.4);overflow:hidden}
+.c2 .faixa{height:38%;background:#2B70F9;animation:faixa 7.5s steps(1) infinite;display:flex;align-items:flex-end;padding:0 8% 6%;color:#fff;font-weight:800;font-size:15px;letter-spacing:-.03em}
+@keyframes faixa{0%{background:#2B70F9}33%{background:#FF70FE}66%{background:#111}}
+.c2 .faixa span::after{content:"Seu Studio";animation:nome 7.5s steps(1) infinite}
+@keyframes nome{0%{content:"Seu Studio"}33%{content:"Studio Bloom"}66%{content:"Nome da Marca"}}
+.c2 .ln{height:7px;border-radius:9px;background:#ececec;margin:10px 8% 0}
+.c2 .ln.c{width:50%}
+.c2 .pal{position:absolute;right:6%;bottom:8%;display:flex;gap:6px;background:#fff;border:1px solid #eee;border-radius:999px;padding:6px 8px;box-shadow:0 10px 20px -12px rgba(0,0,0,.35)}
+.c2 .pal i{width:16px;height:16px;border-radius:50%}
+.c2 .cursor{position:absolute;right:12%;bottom:20%;width:18px;animation:clica 7.5s ease-in-out infinite}
+@keyframes clica{0%,30%{transform:translate(0,0)}33%{transform:translate(-22px,10px)}63%{transform:translate(-22px,10px)}66%{transform:translate(-44px,10px)}96%{transform:translate(-44px,10px)}100%{transform:translate(0,0)}}
+/* passo 3: quadro de projetos com status andando */
+.c3{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:8%}
+.c3 .col{background:#fff;border-radius:10px;padding:8px;box-shadow:0 10px 20px -14px rgba(0,0,0,.3)}
+.c3 .col b{display:block;font-size:10px;color:#777;margin-bottom:6px}
+.c3 .tk{height:22px;border-radius:6px;background:#f1f1f1;margin-top:6px}
+.c3 .mv{position:absolute;left:11%;top:46%;width:24%;height:22px;border-radius:6px;background:var(--k-green);color:#111;font-size:10px;font-weight:700;display:flex;align-items:center;padding-left:8px;animation:anda 6s ease-in-out infinite;box-shadow:0 10px 18px -10px rgba(0,0,0,.4)}
+@keyframes anda{0%,15%{transform:translateX(0)}40%,55%{transform:translateX(118%)}80%,100%{transform:translateX(236%)}}
+
+/* ===== ENTREGÁVEIS ===== */
+.ent{display:grid;gap:18px;margin-top:40px}
+.eg{display:grid;grid-template-columns:1fr 1.05fr;gap:34px;align-items:center;background:var(--card);border:1px solid var(--line);box-shadow:var(--card-shadow);border-radius:26px;padding:30px}
+.eg:nth-child(even) .vis{order:-1}
+.eg h3{font-size:26px;letter-spacing:-.035em}
+.eg .sub2{font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--c);margin-top:6px}
+.eg ul{list-style:none;margin:18px 0 0;padding:0;display:grid;gap:10px}
+.eg li{display:flex;gap:10px;font-size:16px;line-height:1.45}
+.eg li::before{content:"";flex:none;width:20px;height:20px;margin-top:2px;border-radius:50%;background:var(--c) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M7 12.5l3.2 3.2L17 9' fill='none' stroke='%23fff' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/16px no-repeat}
+.eg .vis{position:relative;border-radius:20px;overflow:hidden;background:var(--c);aspect-ratio:1164/533}
+.eg .vis img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.eg:hover .vis img{transform:scale(1.04)}
+.eg .vis .duo{position:absolute;inset:0;display:grid;grid-template-columns:1fr 1fr}
+.eg .vis .duo img{height:100%}
+.eg .vis .chip{position:absolute;left:14px;bottom:14px;background:#fff;color:#111;font-size:12.5px;font-weight:700;border-radius:999px;padding:7px 12px;box-shadow:0 10px 20px -10px rgba(0,0,0,.35);animation:boia 5s ease-in-out infinite}
+@keyframes boia{0%,100%{translate:0 0}50%{translate:0 -6px}}
+.ferr{max-width:520px;margin:36px auto 0;text-align:center}
+.ferr img{width:100%;height:auto}
+.ferr p{color:var(--muted);font-size:15px;margin-top:10px}
+
+/* ===== PRA VOCÊ QUE ===== */
+.pq{background:#111;color:#fff;border-radius:36px;margin:0 16px;padding:90px 0}
+.pq h2{color:#fff}
+.pqlist{max-width:760px;margin:34px auto 0;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.pqlist div{background:#fff;color:#111;border-radius:16px;padding:16px 18px;font-weight:600;font-size:15.5px;line-height:1.4;display:flex;gap:10px}
+.pqlist div::before{content:"✓";color:#1fa95a;font-weight:800}
+.pq .fim{max-width:640px;margin:28px auto 0;text-align:center;font-weight:700;font-size:17px;color:#e8e8e8}
+
+/* ===== RECAPITULANDO + OFERTA ===== */
+.recap{max-width:720px;margin:34px auto 0;background:var(--card);border:1px solid var(--line);border-radius:22px;box-shadow:var(--card-shadow);padding:10px 24px}
+.recap div{display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px solid var(--line);font-size:15.5px}
+.recap div:last-child{border:0}
+.recap span::before{content:"✓";color:#1fa95a;font-weight:800;margin-right:10px}
+.recap b{font-variant-numeric:tabular-nums}
+.recap .bn span{color:var(--muted)}
+.deveria{text-align:center;margin-top:26px}
+.deveria b{display:block;font-size:22px;letter-spacing:-.03em}
+.deveria s{color:#e0533f}
+.deveria p{color:var(--muted);margin-top:6px}
+.oferta{position:relative;max-width:900px;margin:40px auto 0;display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center;background:#111;color:#fff;border-radius:30px;padding:34px;overflow:hidden}
+.oferta::before{content:"";position:absolute;width:420px;height:420px;left:-120px;top:-160px;background:radial-gradient(closest-side,rgba(255,112,254,.35),transparent);pointer-events:none}
+.oferta::after{content:"";position:absolute;width:420px;height:420px;right:-160px;bottom:-200px;background:radial-gradient(closest-side,rgba(43,112,249,.35),transparent);pointer-events:none}
+.oferta .mk{position:relative;z-index:1;animation:boia 6s ease-in-out infinite}
+.oferta .mk img{width:100%;height:auto;filter:drop-shadow(0 30px 40px rgba(0,0,0,.5))}
+.oferta .pr{position:relative;z-index:1}
+.oferta .nm{font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#bbb}
+.oferta .por{margin-top:14px;color:#bbb;font-size:15px}
+.oferta .por s{color:#ff8a78}
+.oferta .val{font-size:clamp(56px,7vw,84px);font-weight:800;letter-spacing:-.06em;line-height:1;color:#fff}
+.oferta .val small{font-size:.4em;letter-spacing:-.02em;margin-right:4px;color:#bbb}
+.oferta .parc{color:#ddd;font-weight:600;margin-top:6px}
+.oferta .btn{width:100%;margin-top:22px}
+.oferta .seg{display:flex;flex-wrap:wrap;gap:8px 14px;margin-top:14px;font-size:12.5px;color:#aaa}
+.oferta .gar{display:flex;align-items:center;gap:10px;margin-top:16px;font-size:13.5px;color:#ddd}
+.oferta .gar svg{width:34px;height:34px;flex:none}
+
+/* ===== COMO COMPRAR ===== */
+.compra{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:900px;margin:30px auto 0}
+.compra div{background:var(--card);border:1px solid var(--line);border-radius:20px;box-shadow:var(--card-shadow);padding:24px;text-align:center}
+.compra i{display:grid;place-items:center;width:46px;height:46px;margin:0 auto 12px;border-radius:14px;background:var(--c);color:#fff;font-style:normal;font-weight:800}
+.compra b{display:block;font-size:15px;letter-spacing:-.02em}
+.compra p{color:var(--muted);font-size:14px;margin-top:6px}
+
+/* ===== LARI ===== */
+.lari{display:grid;grid-template-columns:1.3fr .7fr;gap:40px;align-items:center;max-width:900px;margin:0 auto;background:var(--card);border:1px solid var(--line);border-radius:28px;box-shadow:var(--card-shadow);padding:40px}
+.lari .eb{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent-2)}
+.lari h2{font-size:clamp(28px,3.4vw,38px);margin-top:8px}
+.lari p{color:var(--muted);margin-top:14px;font-size:16.5px}
+.lari img{width:100%;height:auto;border-radius:22px;aspect-ratio:1;object-fit:cover}
+
+/* ===== DUAS OPÇÕES ===== */
+.op{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:900px;margin:30px auto 0}
+.op div{border-radius:22px;padding:28px;text-align:center}
+.op .o1{background:#fdecea}.op .o2{background:#e6f7ec}
+.op i{display:grid;place-items:center;width:44px;height:44px;margin:0 auto 12px;border-radius:50%;color:#fff;font-style:normal;font-weight:800}
+.op .o1 i{background:#e0533f}.op .o2 i{background:#1fa95a}
+.op b{display:block;font-size:20px;letter-spacing:-.03em}
+.op .o1 b{color:#c23e2b}.op .o2 b{color:#168a48}
+.op p{margin-top:8px;font-size:15.5px}
+.inteligente{text-align:center;margin-top:30px;font-size:19px;font-weight:700}
+.inteligente span{display:block;font-weight:500;color:var(--muted);font-size:16px;margin-top:6px}
+
+.rod{text-align:center;padding:40px 16px 110px;color:var(--dim);font-size:13px;border-top:1px solid var(--line)}
+.rod p+p{margin-top:8px;font-size:12px}
+
+@media (max-width:860px){
+  .vs{grid-template-columns:1fr}
+  .pp,.eg{grid-template-columns:1fr;gap:20px}
+  .eg:nth-child(even) .vis{order:0}
+  .oferta,.lari{grid-template-columns:1fr}
+  .lari img{max-width:240px}
+}
+@media (max-width:640px){
+  .passos,.pq{margin:0;border-radius:0;padding:70px 0}
+  .pqlist,.compra,.op{grid-template-columns:1fr}
+  .pp,.eg{padding:22px}
+  .oferta,.lari{padding:24px}
+  .bal{max-width:92%;font-size:15px}
+  .arq{font-size:10.5px;padding:6px 8px}
+  .pasta span{font-size:8px}
+  .vsc.com{aspect-ratio:1/1.08}
+  .pastas{top:17%;gap:9px}
+  .prop{bottom:6%;left:7%;right:7%}
+}
+</style>
+</head>
+<body data-curso="Kit Design Studio">
+
+<div class="topo"><b>R$47</b> · Acesso vitalício · +300 designers já usam</div>
+
+<!-- Abertura -->
+<header class="hero k">
+  <div class="bgfx"><div class="glow"></div></div>
+  <div class="wrap">
+    <img class="logo-k" src="assets/logo-kit-escuro.webp" alt="Kit Design Studio · Lari Tedeschi" width="798" height="393">
+    <span class="pillbar"><img src="assets/alunos.webp" alt=""><span><b>+300 designers</b> já estruturaram o studio com o Kit</span></span>
+    <h1 id="h1">Tenha acesso imediato aos <span class="grad">contratos, propostas e documentos essenciais</span> para atender seus clientes de design com mais segurança e profissionalismo.</h1>
+
+    <div class="vs">
+      <div class="vsc sem rv" role="img" aria-label="Sem o Kit: arquivos soltos e mensagens de cliente cobrando">
+        <span class="tg">✕ Você sem o Kit</span>
+        <div class="arq w a1"><i></i>contrato_modelo_google.docx</div>
+        <div class="arq p a2"><i></i>proposta (3) FINAL.pdf</div>
+        <div class="arq a3"><i></i>briefing_copiado.txt</div>
+        <div class="arq x a4"><i></i>orcamento_v2_agora_vai.xlsx</div>
+        <div class="arq w a5"><i></i>contrato_final_final.docx</div>
+        <div class="zap z1">Oi! Já tem o contrato pra eu assinar? 😅<small>14:02</small></div>
+        <div class="zap z2">Quanto fica o projeto todo?<small>14:09</small></div>
+        <div class="zap z3">Esqueci de te passar umas referências…<small>14:31</small></div>
+      </div>
+      <div class="vsc com rv" role="img" aria-label="Com o Kit: documentos organizados e proposta com a sua marca enviada">
+        <span class="tg">✓ Você com o Kit</span>
+        <div class="pastas">
+          <div class="pasta" style="--c:#2B70F9;--i:0"><span>Contratos</span></div>
+          <div class="pasta" style="--c:#FF70FE;--i:1"><span>Propostas</span></div>
+          <div class="pasta esc" style="--c:#3DDC7A;--i:2"><span>Briefing</span></div>
+          <div class="pasta esc" style="--c:#FEA711;--i:3"><span>Manual</span></div>
+          <div class="pasta" style="--c:#111;--i:4"><span>Scripts</span></div>
+          <div class="pasta" style="--c:#2B70F9;--i:5"><span>Apresentação</span></div>
+          <div class="pasta" style="--c:#FF70FE;--i:6"><span>Dashboard</span></div>
+          <div class="pasta esc" style="--c:#3DDC7A;--i:7"><span>Bônus</span></div>
+        </div>
+        <div class="prop"><div class="cap">SUA MARCA</div><div class="tx"><b>Proposta comercial</b><i></i><i></i></div><span class="ok">✓ Enviada</span></div>
+      </div>
+    </div>
+
+    <div class="ctas rv">
+      <a class="btn" href="#oferta">Quero estruturar meu studio <span class="arr">→</span></a>
+    </div>
+    <p class="micro rv">🔒 Pagamento seguro · Acesso vitalício · 7 dias de garantia</p>
+  </div>
+</header>
+
+<!-- Depoimentos: entram quando chegarem os prints de WhatsApp das alunas -->
+
+<!-- Dores -->
+<section class="dores" data-blur="lr">
+  <div class="wrap">
+    <h2 class="rv">Você não aguenta mais montar proposta e contrato do zero, e ver cada cliente novo <span class="grad">virar um caos.</span></h2>
+    <p class="pensa rv">Por isso, você pensa:</p>
+    <div class="baloes">
+      <div class="bal rv">"Será que esse contrato que eu baixei tem tudo que precisa?"</div>
+      <div class="bal rv">"Quanto eu cobro por isso sem parecer cara… ou barata demais?"</div>
+      <div class="bal rv">"Esqueci de perguntar isso no briefing… agora vou ter que refazer."</div>
+      <div class="bal rv">"Ela vai achar minha proposta amadora."</div>
+    </div>
+    <p class="eusei rv">Eu sei…<br>você não aguenta mais improvisar e sentir que o seu trabalho vale mais do que parece. <em>Estou certa?</em></p>
+    <p class="e-se rv">E se você pudesse atender como um estúdio de verdade, sem precisar criar nada do zero…</p>
+  </div>
+</section>
+
+<!-- 3 passos -->
+<section class="passos">
+  <div class="wrap">
+    <div class="head rv"><span class="eyebrow" style="color:#bbb">Como funciona</span><h2>Esses são os 3 passos para atender seus clientes com mais <span class="grad">segurança e profissionalismo</span></h2></div>
+    <div class="plist">
+      <div class="pp rv" style="--c:#2B70F9">
+        <div><span class="n">Passo 1</span><h3>Tenha os documentos essenciais já prontos</h3><p>Com o Kit Design Studio, você recebe contratos, proposta, briefing, apresentação e scripts prontos, organizados e editáveis no Figma, Canva, Word ou Notion.</p></div>
+        <div class="cena c1" aria-hidden="true">
+          <div class="doc" style="--x:10%;--d:0s"><span>Contrato</span></div>
+          <div class="doc" style="--x:40%;--d:1.2s"><span>Proposta</span></div>
+          <div class="doc" style="--x:70%;--d:2.4s"><span>Briefing</span></div>
+          <div class="pz"><b>Kit Design Studio</b></div>
+        </div>
+      </div>
+      <div class="pp rv" style="--c:#FF70FE">
+        <div><span class="n">Passo 2</span><h3>Personalize com a sua marca</h3><p>Troque cores, fontes e informações em poucos minutos. Uma documentação com a sua cara transmite mais autoridade e confiança para o cliente.</p></div>
+        <div class="cena c2" aria-hidden="true">
+          <div class="pg"><div class="faixa"><span></span></div><div class="ln"></div><div class="ln"></div><div class="ln c"></div></div>
+          <div class="pal"><i style="background:#2B70F9"></i><i style="background:#FF70FE"></i><i style="background:#111"></i></div>
+          <svg class="cursor" viewBox="0 0 24 24"><path d="M4 3l7 18 2.6-7.4L21 11z" fill="#111" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        </div>
+      </div>
+      <div class="pp rv" style="--c:#3DDC7A">
+        <div><span class="n">Passo 3</span><h3>Atenda com mais tranquilidade e feche com mais segurança</h3><p>Saia do improviso e comece a atender sabendo exatamente o que enviar em cada etapa, do primeiro contato à entrega.</p></div>
+        <div class="cena c3" aria-hidden="true">
+          <div class="col"><b>Briefing</b><div class="tk"></div><div class="tk"></div></div>
+          <div class="col"><b>Em criação</b><div class="tk"></div><div class="tk"></div></div>
+          <div class="col"><b>Entregue ✓</b><div class="tk"></div><div class="tk"></div></div>
+          <div class="mv">Projeto Bloom</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- O que você vai receber -->
+<section id="kit" data-blur="lr">
+  <div class="wrap">
+    <div class="head rv"><span class="eyebrow">O que tem dentro</span><h2>Veja tudo que você vai receber com o <span class="grad">Kit Design Studio</span></h2></div>
+    <div class="ent">
+      <div class="eg rv" style="--c:#FF70FE">
+        <div><h3>Contratos e Proposta</h3><p class="sub2">Para fechar com segurança</p>
+          <ul><li>8 contratos prontos, um para cada área (identidade visual, social media, logotipo, embalagem e mais), com uma base revisada por advogado para você adaptar ao seu projeto</li><li>Proposta comercial com escopo, prazo e valores estruturados</li></ul></div>
+        <div class="vis"><div class="duo"><img src="assets/contratos-profissionais.webp" alt="Contratos do Kit" loading="lazy"><img src="assets/proposta-comercial.webp" alt="Proposta comercial do Kit" loading="lazy"></div><span class="chip">📄 8 contratos prontos</span></div>
+      </div>
+      <div class="eg rv" style="--c:#2B70F9">
+        <div><h3>Atendimento e Processo</h3><p class="sub2">Do primeiro contato ao fechamento</p>
+          <ul><li>Roteiro de briefing: as perguntas certas da 1ª reunião</li><li>Processo comercial completo, etapa por etapa</li><li>Scripts de WhatsApp e e-mail: follow-up, negociação, objeção e fechamento</li></ul></div>
+        <div class="vis"><img src="assets/processo-comercial-completo.webp" alt="Processo comercial e scripts do Kit" loading="lazy"><span class="chip">💬 Scripts prontos para copiar</span></div>
+      </div>
+      <div class="eg rv" style="--c:#FEA711">
+        <div><h3>Entrega e Apresentação</h3><p class="sub2">Para valorizar o seu trabalho</p>
+          <ul><li>Apresentação de marca para defender cada decisão</li><li>Manual de marca pronto para entregar ao cliente</li></ul></div>
+        <div class="vis"><div class="duo"><img src="assets/apresentacao-de-marca.webp" alt="Apresentação de marca do Kit" loading="lazy"><img src="assets/manual-de-marca.webp" alt="Manual de marca do Kit" loading="lazy"></div><span class="chip">🎨 Pronto para entregar</span></div>
+      </div>
+      <div class="eg rv" style="--c:#3DDC7A">
+        <div><h3>Gestão e Bônus</h3><p class="sub2">Para organizar e cobrar certo</p>
+          <ul><li>Dashboard de projetos no Notion</li><li>Bônus: Calculadora de Precificação</li><li>Bônus: Tabela de Serviços e Preços</li><li>Bônus: E-book de Posicionamento</li></ul></div>
+        <div class="vis"><img src="assets/dashboard-notion.webp" alt="Dashboard de projetos no Notion" loading="lazy"><span class="chip">🎁 3 bônus inclusos</span></div>
+      </div>
+    </div>
+    <div class="ferr rv"><img src="assets/ferramentas.webp" alt="Figma, Canva, PowerPoint, Word e Notion" loading="lazy" width="1400" height="303"><p>Tudo editável no Figma, Canva, Word, Google Docs, PowerPoint ou Notion.</p></div>
+  </div>
+</section>
+
+<!-- Pra você que -->
+<section class="pq">
+  <div class="wrap">
+    <div class="head rv"><h2>O Kit Design Studio é <span class="grad">pra você que:</span></h2></div>
+    <div class="pqlist">
+      <div class="rv">Quer estruturar o atendimento aos seus clientes com mais profissionalismo;</div>
+      <div class="rv">Sente insegurança toda vez que manda um contrato ou uma proposta;</div>
+      <div class="rv">Não tem documentos organizados e padronizados;</div>
+      <div class="rv">Perde tempo criando tudo do zero ou usando modelo errado da internet;</div>
+      <div class="rv">Quer passar mais seriedade e cobrar o valor certo pelo seu trabalho;</div>
+      <div class="rv">É designer autônoma ou tem um studio: identidade visual, logo, social media, papelaria ou embalagem.</div>
+    </div>
+    <p class="fim rv">Enfim… se você se identificou com pelo menos 2 pontos acima e quer atender como um estúdio de verdade, o Kit Design Studio é para você!</p>
+  </div>
+</section>
+
+<!-- Recapitulando + oferta -->
+<section id="oferta" data-blur="lr">
+  <div class="wrap">
+    <div class="head rv"><span class="eyebrow">Recapitulando</span><h2>Veja tudo que você vai receber no <span class="grad">Kit Design Studio</span></h2></div>
+    <div class="recap rv">
+      <div><span>8 Contratos Profissionais</span><b>R$97</b></div>
+      <div><span>Proposta Comercial</span><b>R$47</b></div>
+      <div><span>Manual de Marca</span><b>R$47</b></div>
+      <div><span>Apresentação de Marca</span><b>R$37</b></div>
+      <div><span>Processo Comercial Completo</span><b>R$47</b></div>
+      <div><span>Scripts de WhatsApp e E-mail</span><b>R$27</b></div>
+      <div><span>Roteiro de Briefing</span><b>R$27</b></div>
+      <div><span>Dashboard de Projetos no Notion</span><b>R$27</b></div>
+      <div class="bn"><span>Bônus: Calculadora de Precificação</span><b>R$47</b></div>
+      <div class="bn"><span>Bônus: Tabela de Serviços e Preços</span><b>R$37</b></div>
+      <div class="bn"><span>Bônus: E-book de Posicionamento</span><b>R$47</b></div>
+    </div>
+    <div class="deveria rv"><b>Tudo isso deveria custar: <s>+R$487,00</s></b><p>Mas hoje você pode ter acesso ao Kit Design Studio por um valor muito mais acessível!</p></div>
+
+    <div class="oferta rv">
+      <div class="mk"><img src="assets/mockup-kit.webp" alt="Kit Design Studio completo" loading="lazy" width="1164" height="737"></div>
+      <div class="pr">
+        <span class="nm">Kit Design Studio + 3 bônus</span>
+        <p class="por">De <s>R$487</s> por apenas:</p>
+        <p class="val"><small>R$</small>47</p>
+        <p class="parc">à vista, ou em até 12x de R$4,70 no cartão</p>
+        <a class="btn" href="https://pay.kiwify.com.br/qAoZ63k">Quero estruturar meu studio <span class="arr">→</span></a>
+        <div class="seg"><span>🔒 Pagamento seguro</span><span>Pix ou cartão</span><span>Acesso imediato por e-mail</span></div>
+        <div class="gar"><svg viewBox="0 0 24 24"><path d="M12 2l8 3.5v6c0 5-3.4 8.6-8 10.5-4.6-1.9-8-5.5-8-10.5v-6z" fill="#3DDC7A"/><path d="M8.5 12l2.4 2.4L15.5 10" fill="none" stroke="#111" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>7 dias de garantia.</b> Não fez sentido? Devolvemos 100% do valor.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Compra -->
+<section style="padding-top:20px">
+  <div class="wrap">
+    <div class="head rv"><h2>Compre agora e receba seu acesso no e-mail <span class="grad">imediatamente!</span></h2></div>
+    <div class="compra">
+      <div class="rv" style="--c:#2B70F9"><i>$</i><b>Finalize sua compra</b><p>Com total segurança em poucos minutos.</p></div>
+      <div class="rv" style="--c:#FF70FE"><i>↓</i><b>Receba acesso imediato</b><p>Os arquivos chegam direto no seu e-mail.</p></div>
+      <div class="rv" style="--c:#1fa95a"><i>✓</i><b>Use com seus clientes</b><p>Personalize e envie no próximo atendimento.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Lari -->
+<section data-blur="r">
+  <div class="wrap">
+    <div class="lari rv">
+      <div>
+        <span class="eb">Criadora do Kit Design Studio</span>
+        <h2>Lari Tedeschi</h2>
+        <p>Durante muito tempo, vi designers talentosas perdendo clientes por falta de estrutura: proposta improvisada, contrato copiado da internet, nenhum processo.</p>
+        <p>Por isso, criei um material prático, editável e pensado para a realidade da designer autônoma, para você atender com mais confiança, credibilidade e tranquilidade, do primeiro contato à entrega.</p>
+      </div>
+      <img src="assets/lari-tedeschi.webp" alt="Lari Tedeschi" loading="lazy" width="600" height="600">
+    </div>
+  </div>
+</section>
+
+<!-- Duas opções -->
+<section style="padding-top:20px">
+  <div class="wrap">
+    <div class="head rv"><h2>Agora você tem <span class="grad">duas opções:</span></h2></div>
+    <div class="op">
+      <div class="o1 rv"><i>✕</i><b>Opção 1:</b><p>Continuar no improviso, perdendo tempo montando tudo do zero e vendo clientes escolherem designers mais organizadas.</p></div>
+      <div class="o2 rv"><i>✓</i><b>Opção 2:</b><p>Ter acesso imediato ao Kit Design Studio e começar a atender com mais organização, segurança e profissionalismo.</p></div>
+    </div>
+    <p class="inteligente rv">Eu sei (e você também sabe): a opção 2 é a mais inteligente.<span>Então clique no botão abaixo e acesse agora mesmo o Kit Design Studio.</span></p>
+
+    <div class="oferta rv">
+      <div class="mk"><img src="assets/mockup-kit.webp" alt="Kit Design Studio completo" loading="lazy" width="1164" height="737"></div>
+      <div class="pr">
+        <span class="nm">Kit Design Studio + 3 bônus</span>
+        <p class="por">Por apenas:</p>
+        <p class="val"><small>R$</small>47</p>
+        <p class="parc">à vista, ou em até 12x de R$4,70 no cartão</p>
+        <a class="btn" href="https://pay.kiwify.com.br/qAoZ63k">Quero estruturar meu studio <span class="arr">→</span></a>
+        <div class="seg"><span>🔒 Pagamento seguro</span><span>Acesso vitalício</span><span>7 dias de garantia</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Perguntas frequentes -->
+<section class="faq" id="faq">
+  <div class="wrap">
+    <div class="top rv"><h2><span class="grad">Perguntas</span> frequentes</h2><p>Ficou alguma dúvida?<br>Chama no WhatsApp.</p></div>
+    <div class="list">
+      <details class="rv" open><summary>O acesso ao material é imediato?</summary><p>Sim. Após a confirmação da compra, você recebe o acesso diretamente no seu e-mail.</p></details>
+      <details class="rv" open><summary>Os documentos são editáveis?</summary><p>Sim. Todos os materiais podem ser editados no Figma, Canva, Word, Google Docs, PowerPoint ou Notion. É só escolher a ferramenta que você já usa.</p></details>
+      <details class="rv" open><summary>Eu não entendo nada de Figma ou Notion, vou conseguir usar?</summary><p>Sim. Os modelos têm versões em Canva e Word, ferramentas que você provavelmente já usa.</p></details>
+      <details class="rv" open><summary>Funciona para qualquer serviço de design?</summary><p>Sim. São 8 contratos para áreas diferentes, e a proposta, o briefing e os scripts se adaptam a qualquer projeto.</p></details>
+      <details class="rv" open><summary>O pagamento é seguro?</summary><p>Sim. O pagamento é realizado em ambiente totalmente seguro.</p></details>
+      <details class="rv" open><summary>E se eu não gostar?</summary><p>Você tem 7 dias de garantia. É só pedir o reembolso, sem burocracia.</p></details>
+      <details class="rv" open><summary>E se eu tiver dúvidas?</summary><p>Você pode entrar em contato pelo suporte informado após a compra, ou chamar no WhatsApp.</p></details>
+    </div>
+  </div>
+</section>
+
+<footer class="rod">
+  <p>Termos de uso e política de privacidade · Copyright © Lari Tedeschi · Kit Design Studio · 2026</p>
+  <p>Este site não é afiliado ao Facebook nem a nenhuma entidade do Facebook. A compra deste material não garante nenhum tipo de resultado.</p>
+</footer>
+
+<a class="wa" href="https://wa.me/5541999401055" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 20 20" fill="#fff"><path d="M17.085 2.91A9.9 9.9 0 0 0 10.04 0C4.553 0 .08 4.45.08 9.91c0 1.75.463 3.45 1.327 4.95L0 20l5.276-1.38a9.97 9.97 0 0 0 4.764 1.21C15.528 19.83 20 15.38 20 9.92c0-2.65-1.035-5.14-2.915-7.01zM10.04 18.15a8.3 8.3 0 0 1-4.221-1.15l-.301-.18-3.136.82.834-3.04-.201-.31a8.2 8.2 0 0 1-1.266-4.38c0-4.54 3.718-8.24 8.281-8.24 2.211 0 4.292.86 5.849 2.42a8.15 8.15 0 0 1 2.423 5.83c.02 4.54-3.699 8.23-8.262 8.23zm4.543-6.16c-.251-.12-1.477-.72-1.699-.81-.231-.08-.392-.12-.562.12-.171.25-.644.81-.784.97-.141.17-.292.19-.543.06-.251-.12-1.055-.39-2-1.230-.744-.66-1.236-1.47-1.387-1.72-.141-.25-.02-.38.111-.51.11-.11.251-.29.371-.43.121-.14.171-.25.252-.41.08-.17.04-.31-.02-.43-.061-.12-.563-1.34-.764-1.840-.201-.48-.412-.42-.563-.43h-.482c-.171 0-.433.06-.664.31-.221.25-.864.85-.864 2.07s.894 2.4 1.015 2.56c.121.17 1.759 2.67 4.251 3.74.593.26 1.056.41 1.417.52.593.19 1.136.16 1.568.1.483-.07 1.478-.6 1.679-1.180.211-.58.211-1.070.14-1.180-.07-.11-.221-.16-.472-.28z"/></svg>
+</a>
+
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="assets/escola.js"></script>
+</body>
+</html>
