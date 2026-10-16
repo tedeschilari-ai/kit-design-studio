@@ -29,15 +29,14 @@ fbq('init','874750447646279');fbq('track','PageView');fbq('track','ViewContent',
 .topo{background:var(--verm);color:#fff;text-align:center;font-size:13.5px;font-weight:600;padding:9px 16px;letter-spacing:-.01em;position:relative;z-index:26}
 .topo b{display:inline-block;width:7px;height:7px;border-radius:50%;background:#fff;margin-right:8px;vertical-align:middle;animation:pisca 1.4s ease-in-out infinite}
 @keyframes pisca{50%{opacity:.25}}
-.hero{margin-top:-68px;padding:100px 0 30px}
-.hero h1{font-size:clamp(30px,3.5vw,46px);max-width:860px;margin-top:0}
+.hero{margin-top:-68px;padding:92px 0 30px}
+.hero h1{font-size:clamp(30px,3.3vw,44px);max-width:820px;margin-top:0}
 .btn.cta{font-size:17px;padding:19px 34px;text-transform:uppercase;letter-spacing:.01em}
 .btn.pulsa{animation:pulsa 2.6s ease-in-out infinite}
-@keyframes pulsa{0%,100%{box-shadow:0 0 0 1px rgba(255,255,255,.25) inset,0 12px 34px -10px rgba(63,191,24,.7),0 0 0 0 rgba(63,191,24,.45)}50%{box-shadow:0 0 0 1px rgba(255,255,255,.25) inset,0 12px 34px -10px rgba(63,191,24,.7),0 0 0 14px rgba(63,191,24,0)}}
 .ico-pasta{display:inline-block;width:1em;height:.78em}
 
 /* ---------- antes e depois (abertura): duas telas lado a lado ---------- */
-.ad{display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:900px;margin:28px auto 0;text-align:left}
+.ad{display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:820px;margin:24px auto 0;text-align:left}
 .ad .lado{position:relative;aspect-ratio:16/10.5;border-radius:22px;overflow:hidden;container-type:inline-size;border:1px solid var(--line-2)}
 .ad .sem{background:radial-gradient(circle at 30% 30%,#2a2830,#1a1920);box-shadow:0 30px 60px -36px rgba(0,0,0,.9)}
 .ad .com{background:radial-gradient(circle at 70% 15%,#24418f,#14204d 70%);box-shadow:0 30px 70px -30px rgba(43,112,248,.55)}
@@ -68,6 +67,21 @@ fbq('init','874750447646279');fbq('track','PageView');fbq('track','ViewContent',
 .pasta:nth-child(2) svg{animation-delay:-.75s}.pasta:nth-child(3) svg{animation-delay:-1.5s}.pasta:nth-child(4) svg{animation-delay:-2.25s}.pasta:nth-child(5) svg{animation-delay:-3s}.pasta:nth-child(6) svg{animation-delay:-3.75s}.pasta:nth-child(7) svg{animation-delay:-4.5s}.pasta:nth-child(8) svg{animation-delay:-5.25s}
 @keyframes flutua{50%{translate:0 -1.2cqw}}
 
+.editl{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:8px 12px;margin:20px auto 0;font-size:15px;color:var(--muted)}
+.editl b{color:#fff;font-weight:600}
+.mini-apps{display:inline-flex;align-items:center;gap:10px}
+.mini-apps img{height:24px;width:auto;filter:drop-shadow(0 4px 8px rgba(0,0,0,.35))}
+.mini-apps img[alt="Notion"]{filter:invert(1) drop-shadow(0 4px 8px rgba(0,0,0,.35))}
+/* botões no padrão do gestor: verde claro, texto escuro */
+.btn,.btn.cta,.caixa .price .btn{background:#7ee08f;color:#16241a;text-transform:none;letter-spacing:-.03em;font-weight:700;box-shadow:0 14px 34px -14px rgba(126,224,143,.75)}
+.btn:hover{background:#8ce99c}
+.btn.cta{font-size:20px;padding:20px 44px}
+.caixa .price .btn{font-size:19px;padding:19px;border-radius:999px}
+@keyframes pulsa{0%,100%{box-shadow:0 14px 34px -14px rgba(126,224,143,.75),0 0 0 0 rgba(126,224,143,.5)}50%{box-shadow:0 14px 34px -14px rgba(126,224,143,.75),0 0 0 14px rgba(126,224,143,0)}}
+/* selos de pagamento único e acesso imediato */
+.selos-p{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-top:16px}
+.selos-p span{display:inline-flex;align-items:center;gap:7px;font-size:14.5px;font-weight:700;color:#14532d;background:#e3f8e7;border:1px solid #b8ebc3;border-radius:999px;padding:8px 14px}
+.selos-p svg{width:17px;height:17px;flex:none}
 /* ---------- prints do WhatsApp ---------- */
 .zaps .car figure{width:250px;padding:0;border:0;background:none}
 .fone{border-radius:26px;background:#fff;padding:8px;box-shadow:var(--card-shadow),0 0 0 1px var(--line)}
@@ -189,7 +203,8 @@ fbq('init','874750447646279');fbq('track','PageView');fbq('track','ViewContent',
 .recibo .tt img{height:30px;width:auto}
 .linha{display:flex;align-items:baseline;gap:10px;padding:11px 0;font-size:16px}
 .linha svg{flex:none;width:18px;height:18px;align-self:center}
-.linha .nm{flex:none}
+.linha .nm{flex:0 1 auto;min-width:0}
+.linha .nm small{display:block;font-size:12.5px;color:rgba(26,31,54,.55)}
 .linha .pt{flex:1;border-bottom:2px dotted var(--line-2);translate:0 -4px}
 .linha .vl{flex:none;font-weight:700;font-variant-numeric:tabular-nums}
 .recibo .tot{margin-top:14px;padding-top:18px;border-top:2px dashed var(--line-2);text-align:center}
@@ -211,7 +226,7 @@ fbq('init','874750447646279');fbq('track','PageView');fbq('track','ViewContent',
 .caixa .price .por{font-size:15px;font-weight:600;color:#6b6470;margin-top:16px}
 .caixa .price .val{color:#16a34a;margin-top:2px}
 .caixa .price .avista{margin-top:6px}
-.caixa .price .btn{text-transform:uppercase;font-size:16px}
+
 .garantia-l{display:flex;align-items:center;justify-content:center;gap:12px;max-width:1000px;margin:18px auto 0;font-size:15px;color:var(--muted);text-align:left}
 .garantia-l svg{flex:none;width:40px;height:40px}
 .garantia-l b{color:var(--txt)}
@@ -266,7 +281,7 @@ fbq('init','874750447646279');fbq('track','PageView');fbq('track','ViewContent',
 @media (max-width:640px){
   .topo{font-size:11px;padding:8px 8px;white-space:nowrap;letter-spacing:-.02em}
   .hero h1{font-size:clamp(24px,6.7vw,30px);line-height:1.08}
-  .btn.cta{width:100%;font-size:15.5px;padding:18px 20px}
+  .btn.cta{width:100%;font-size:19px;padding:18px 20px}
   .hero{padding:90px 0 24px}
   .ad{grid-template-columns:1fr;gap:8px;margin-top:20px}
   .ad .lado{aspect-ratio:2.15/1;border-radius:16px}
@@ -289,8 +304,11 @@ fbq('init','874750447646279');fbq('track','PageView');fbq('track','ViewContent',
   .lari .foto{width:240px}
   .opcoes{grid-template-columns:1fr}
   .garantia-l{font-size:14px}
+  .editl{font-size:13.5px;margin-top:14px;gap:8px 10px;line-height:1.35}.mini-apps{gap:8px}.mini-apps img{height:20px}
+  .linha .nm small{font-size:11.5px}
   .nav .btn{display:none}.nav .wrap{justify-content:center}
-  .caixa .price .btn{font-size:14.5px;padding:18px 12px;white-space:nowrap}
+  .caixa .price .btn{font-size:18px;padding:18px 12px;white-space:nowrap}
+  .selos-p{gap:5px;flex-wrap:nowrap}.selos-p span{font-size:12px;padding:6px 8px;gap:4px;white-space:nowrap}.selos-p svg{width:15px;height:15px}
   .lari .grid>div{text-align:center}
 }
 @media (prefers-reduced-motion:reduce){.bal{opacity:1;translate:none;scale:1}}
@@ -309,7 +327,7 @@ fbq('init','874750447646279');fbq('track','PageView');fbq('track','ViewContent',
 <nav class="nav" id="nav">
   <div class="wrap">
     <img class="logo" src="assets/logo-kit.webp" alt="Kit Design Studio" width="69" height="34">
-    <a class="btn" href="#oferta">Quero estruturar meu studio</a>
+    <a class="btn" href="#oferta">Quero o Kit por R$47</a>
   </div>
 </nav>
 
@@ -345,7 +363,9 @@ fbq('init','874750447646279');fbq('track','PageView');fbq('track','ViewContent',
       </div>
     </div>
 
-    <div class="ctas rv" style="margin-top:28px"><a class="btn cta pulsa" href="#oferta">Quero estruturar meu studio <span class="arr">→</span></a></div>
+    <p class="editl rv">Editável nos programas que você já conhece<span class="mini-apps"><img src="assets/logo-figma.webp" alt="Figma" width="149" height="223"><img src="assets/logo-canva.webp" alt="Canva" width="223" height="223"><img src="assets/logo-powerpoint.webp" alt="PowerPoint" width="260" height="223"><img src="assets/logo-word.webp" alt="Word" width="218" height="223"><img src="assets/logo-notion.webp" alt="Notion" width="214" height="223"></span></p>
+
+    <div class="ctas rv" style="margin-top:18px"><a class="btn cta pulsa" href="#oferta">Quero o Kit por R$47</a></div>
   </div>
 </header>
 
@@ -519,7 +539,8 @@ fbq('init','874750447646279');fbq('track','PageView');fbq('track','ViewContent',
       <div class="linha"><svg><use href="#v"/></svg><span class="nm">Scripts de WhatsApp e E-mail</span><span class="pt"></span><span class="vl">R$27</span></div>
       <div class="linha"><svg><use href="#v"/></svg><span class="nm">Roteiro de Briefing</span><span class="pt"></span><span class="vl">R$27</span></div>
       <div class="linha"><svg><use href="#v"/></svg><span class="nm">Dashboard de Projetos no Notion</span><span class="pt"></span><span class="vl">R$47</span></div>
-      <div class="tot"><b>TUDO ISSO DEVERIA CUSTAR: <span>+R$376,00</span></b></div>
+      <div class="linha"><svg><use href="#v"/></svg><span class="nm">Edição em qualquer programa <small>(Figma, Canva, Word, PowerPoint e Notion)</small></span><span class="pt"></span><span class="vl">R$97</span></div>
+      <div class="tot"><b>TUDO ISSO DEVERIA CUSTAR: <span>+R$473,00</span></b></div>
     </div>
     <p class="mas rv">Mas hoje você pode ter acesso ao Kit Design Studio por um <span class="grad">valor muito mais acessível!</span></p>
   </div>
@@ -537,10 +558,11 @@ fbq('init','874750447646279');fbq('track','PageView');fbq('track','ViewContent',
       <div class="price">
         <span class="lbl">KIT DESIGN STUDIO</span>
         <p class="por">Por apenas:</p>
-        <p class="val"><small>R$</small><span class="conta" data-de="376" data-ate="47">47</span></p>
+        <p class="val"><small>R$</small><span class="conta" data-de="473" data-ate="47">47</span></p>
         <p class="avista">à vista, ou em até 12x no cartão</p>
-        <a class="btn pulsa" href="https://pay.kiwify.com.br/qAoZ63k">Quero estruturar meu studio</a>
-        <div class="secure"><span>🔒 Pagamento seguro</span><span>Acesso imediato no e-mail</span></div>
+        <a class="btn pulsa" href="https://pay.kiwify.com.br/qAoZ63k">Quero o Kit por R$47</a>
+        <div class="selos-p"><span><svg viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2.5"/><path d="M3 10h18"/></svg>Pagamento único</span><span><svg viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg>Acesso imediato</span></div>
+        <div class="secure"><span>🔒 Pagamento 100% seguro</span><span>Os arquivos chegam no seu e-mail</span></div>
       </div>
     </div>
     <p class="garantia-l rv"><svg><use href="#selo"/></svg><span><b>Você tem 7 dias de garantia.</b> É só pedir o reembolso, sem burocracia.</span></p>
@@ -604,10 +626,11 @@ fbq('init','874750447646279');fbq('track','PageView');fbq('track','ViewContent',
       <div class="price">
         <span class="lbl">KIT DESIGN STUDIO</span>
         <p class="por">Por apenas:</p>
-        <p class="val"><small>R$</small><span class="conta" data-de="376" data-ate="47">47</span></p>
+        <p class="val"><small>R$</small><span class="conta" data-de="473" data-ate="47">47</span></p>
         <p class="avista">à vista, ou em até 12x no cartão</p>
-        <a class="btn pulsa" href="https://pay.kiwify.com.br/qAoZ63k">Quero estruturar meu studio</a>
-        <div class="secure"><span>🔒 Pagamento seguro</span><span>Acesso imediato no e-mail</span></div>
+        <a class="btn pulsa" href="https://pay.kiwify.com.br/qAoZ63k">Quero o Kit por R$47</a>
+        <div class="selos-p"><span><svg viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2.5"/><path d="M3 10h18"/></svg>Pagamento único</span><span><svg viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg>Acesso imediato</span></div>
+        <div class="secure"><span>🔒 Pagamento 100% seguro</span><span>Os arquivos chegam no seu e-mail</span></div>
       </div>
     </div>
     <p class="garantia-l rv"><svg><use href="#selo"/></svg><span><b>Você tem 7 dias de garantia.</b> É só pedir o reembolso, sem burocracia.</span></p>
